@@ -1,0 +1,5 @@
+/* Code tidied up by ScrapBook */
+.ui-helper-hidden-accessible { border: 0px none; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; }
+.ui-front { z-index: 100; }
+.ui-autocomplete { position: absolute; top: 0px; left: 0px; cursor: default; background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(187, 187, 187); font-size: 11px; }
+.ui-menu { list-style: outside none none; padding: 2px; margin: 0px; display: block; outline: medium none; overflow: auto; height: 100px; }

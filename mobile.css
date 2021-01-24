@@ -1,0 +1,24 @@
+/* Code tidied up by ScrapBook */
+@media only screen and (max-width: 1000px) {
+  .element_menu_produkt, body { padding: 0px; }
+  #box_01, .header, .header-mini, .sort_box { height: auto; }
+  #szukaj, .nav { text-align: center; }
+  body { font-size: 14px; margin: 0px; }
+  section { padding: 0px 20px; }
+  h1 { font-size: 17px; }
+  h2 { font-size: 15px; }
+  #lightboxOverlay { width: 100% !important; }
+  #lightbox { margin: 0px; }
+  .active, .conteiner_foot4_mobile, .nav ul { display: block; }
+  .mapa_kontaktowa { width: 100%; }
+  #szukaj, .pliki { margin: 0px; }
+  #go_up { display: none !important; }
+  #szukaj { float: none; }
+  .header, .header-mini { position: absolute; }
+}
+@media only screen and (max-width: 800px) {
+}
+@media only screen and (max-width: 500px) {
+}
+@media only screen and (max-width: 300px) {
+}

@@ -1,0 +1,145 @@
+/* Code tidied up by ScrapBook */
+@media (max-width: 1400px) {
+}
+@media (max-width: 900px) {
+  #koszyk_mini { width: 100%; display: block !important; margin: 10px 0px; }
+}
+@media only screen and (min-width: 1400px) {
+}
+@keyframes chapta_error {
+0% { background-color: rgb(255, 255, 255); }
+100% { background-color: rgb(255, 0, 0); }
+}
+@keyframes chapta_error {
+0% { background-color: rgb(255, 255, 255); }
+100% { background-color: rgb(255, 0, 0); }
+}
+@media only screen and (max-width: 1400px) {
+}
+@media only screen and (max-width: 1000px) {
+}
+@media only screen and (max-width: 500px) {
+}
+@media only screen and (max-width: 400px) {
+}
+@media only screen and (max-width: 320px) {
+}
+@media only screen and (max-width: 1000px) {
+}
+@media only screen and (max-width: 800px) {
+}
+@media only screen and (max-width: 1400px) {
+}
+@media only screen and (max-width: 1000px) {
+}
+@media only screen and (max-width: 800px) {
+}
+.nav-top a { color: rgb(37, 37, 37); font-size: 14px; margin: 0px; padding: 10px 18px; text-transform: uppercase; display: block; }
+.nav-top a:hover { color: rgb(255, 255, 255); background-color: rgb(37, 37, 37); }
+.nav-top { float: left; list-style: outside none none; margin: 0px; padding: 0px; }
+.nav-top li { float: left; }
+.nav-top-submenu { position: absolute; padding: 0px; display: none; border-top: 2px solid rgb(37, 37, 37); z-index: 9; }
+.nav-top-submenu-wrapper { margin: 0px auto; }
+.nav-top-submenu-panel { background-color: rgb(239, 239, 239); min-height: 400px; display: inline-block; overflow-x: auto; }
+.nav-top-submenu ul { display: inline-block; margin: 0px; list-style: outside none none; padding: 15px; vertical-align: top; width: 185px; }
+.nav-top-submenu li { float: none; margin: 0px; padding: 0px; }
+.nav-top-submenu a { font-size: 12px; margin: 0px; padding: 0px; text-transform: none; line-height: 1.7em; word-spacing: 0.2em; }
+.nav-top-submenu a:hover { background-color: transparent; color: rgb(153, 153, 153); }
+.nav-top-submenu ul li:first-child a { font-size: 14px; border-bottom: 1px solid rgb(187, 187, 187); margin-bottom: 10px; min-height: 35px; font-weight: bold; }
+.logowanie_zaloguj_btn small { opacity: 0; }
+.logowanie_zaloguj_btn:hover small { opacity: 1; }
+.header-mini, .header { z-index: 9999; }
+.column-multi-ul { display: inline-block; width: 250px; vertical-align: top; }
+.dekoracje-dodatki-column { max-width: 1262px; }
+.desktop-menu-none { display: none !important; }
+.menu-top-szycie-marginTop { margin-top: 300px; }
+.nav-top-submenu-panel-00 { width: 1380px; }
+.nav-top-submenu-panel-01 { width: 850px; margin-left: -80px; }
+.nav-top-submenu-panel-02 { width: 650px; margin-left: -182px; }
+.nav-top-submenu-panel-04 { width: 890px; margin-left: -364px; }
+.nav-top-submenu-panel-06 { width: 890px; margin-left: -446px; }
+.nav-top-submenu-panel-07 { width: 850px; margin-left: -543px; }
+.nav-top-submenu-panel-08 { width: 650px; margin-left: -230px; }
+.nav-top-submenu-panel-09 { width: 1290px; margin-left: -877px; }
+.nav-top-submenu-panel-11 { width: 650px; margin-left: -530px; }
+.nav-top-submenu-panel-zaslony { width: 1450px; margin-left: -330px; }
+.nav-top-submenu-panel-firany { width: 1450px; margin-left: -440px; }
+.nav-top-submenu-panel-zaslony .nav-top-submenu-column, .nav-top-submenu-panel-firany .nav-top-submenu-column { float: left; max-width: inherit; }
+.nav-top-submenu ul.columnNoneHead li:first-child a { font-size: 12px; border-bottom: 0px none; margin: 40px 0px 0px; min-height: auto; font-weight: 300; padding: 20px 0px 0px; text-transform: none; line-height: 2em; word-spacing: 0.2em; border-top: 1px solid rgb(0, 0, 0); }
+@media only screen and (max-height: 700px) {
+  .nav-top-submenu-panel { max-height: 500px; }
+}
+@media only screen and (max-height: 600px) {
+  .nav-top-submenu-panel { max-height: 400px; }
+}
+@media only screen and (max-height: 500px) {
+  .nav-top-submenu-panel { max-height: 300px; }
+}
+@media only screen and (max-height: 400px) {
+  .nav-top-submenu-panel { max-height: 200px; }
+}
+@media only screen and (max-height: 300px) {
+  .nav-top-submenu-panel { max-height: 100px; }
+}
+@media only screen and (max-width: 1400px) {
+  .nav-top-submenu-panel { min-height: 270px; }
+  .nav-top-submenu-wrapper { margin: 0px auto; }
+  .nav-top a { font-size: 14px; padding: 10px 8px; }
+  .nav-top-submenu a { margin: 0px; padding: 0px; line-height: 20px; }
+  .nav-top-submenu ul { width: 149px; }
+  .nav-top-submenu a { font-size: 12px; line-height: 18px; }
+  ul.nav-top-submenu-ul-width { width: 185px; }
+  .column-multi-ul { display: inline-block; vertical-align: top; }
+  .dekoracje-dodatki-column { max-width: 875px; }
+  .nav-top-submenu-panel-00 { width: 1245px; }
+  .nav-top-submenu-panel-01 { width: 730px; margin-left: -58px; }
+  .nav-top-submenu-panel-02 { width: 520px; margin-left: -138px; }
+  .nav-top-submenu-panel-04 { width: 760px; margin-left: -277px; }
+  .nav-top-submenu-panel-06 { width: 710px; margin-left: -336px; }
+  .nav-top-submenu-panel-07 { width: 710px; margin-left: -411px; }
+  .nav-top-submenu-panel-08 { width: 510px; margin-left: -80px; }
+  .nav-top-submenu-panel-09 { width: 1145px; margin-left: -681px; }
+  .nav-top-submenu-panel-11 { width: 520px; margin-left: -400px; }
+  .nav-top-submenu-panel-zaslony { width: 1300px; left: -280px; }
+  .nav-top-submenu-panel-firany { width: 1300px; left: -370px; }
+}
+@media only screen and (max-width: 1000px) {
+  #koszyk_mini { width: 100%; margin: 0px; }
+  .nav-top-submenu { width: 100%; position: absolute; left: 0px; }
+  .nav-top-submenu-panel { width: 100% !important; }
+  .nav-top-submenu-wrapper { width: 100%; margin: 0px auto; }
+  .menu-top-szycie-marginTop { margin-top: 25px; }
+  .nav-top-submenu ul.columnNoneHead li:first-child a { margin: 0px; padding: 0px; border-top: 0px none; }
+}
+.logowanie_zaloguj_btn small, .logowanie_zaloguj_btn:hover small, .header-mini .header-box-logo img, .header-mini .header-box-logowanie-btn, .header-mini .header-box-logowanie-btn img, .header-mini .header-box-logo img, .header-mini .header-box-infolinia, .header .header-box-logo img, .header .header-box-logowanie-btn, .header .header-box-logowanie-btn img, .header .header-box-logo img, .header .header-box-infolinia { transition: all 0.4s ease 0s; }
+.menu-mobile-close { display: none; }
+@media only screen and (max-width: 1000px) {
+  #koszyk_mini { width: 100%; margin: 0px; }
+  .nav-top-submenu-panel { width: 50% !important; margin: 0px !important; }
+  .nav-top-submenu-wrapper { width: 100%; margin: 0px auto; }
+  .nav-top { display: none; float: none; overflow: auto; margin: 0px; padding: 0px; position: fixed; background: rgba(255, 255, 255, 0.95) none repeat scroll 0% 0%; width: 100%; z-index: 9999; top: 0px; height: 100%; }
+  .nav-top li { float: none; }
+  .nav-top-submenu { position: fixed; left: 50%; border-top: 0px solid rgb(37, 37, 37); z-index: 9; top: 0px; height: 100%; }
+  .nav-top-submenu-panel { max-height: none; height: 100%; }
+  .nav-top-submenu-wrapper { height: 100%; }
+  .menu-mobile-close { display: block; top: 0px; right: 0px; width: 40px; height: 40px; position: fixed; margin: 5px 10px 0px 0px; z-index: 99; cursor: pointer; background-image: url("menu-mobile-close.png"); background-position: center center; background-repeat: no-repeat; }
+  .nav-top-submenu-panel-08 { float: none; margin-right: auto; }
+  .nav-top-submenu-column { margin-top: 30px; width: 100%; }
+  .nav-top-submenu ul { width: 96% !important; padding: 10% 1% 1% 8% !important; }
+  .column-multi-ul { width: 100%; }
+  .desktop-menu-none { display: inline-block !important; }
+}
+@media only screen and (max-width: 450px) {
+  .nav-top-submenu { left: 40%; }
+  .nav-top-submenu-panel { width: 60% !important; }
+}
+@media only screen and (max-width: 350px) {
+  .nav-top-submenu { left: 35%; }
+  .nav-top-submenu-panel { width: 65% !important; }
+}
+@media only screen and (max-width: 700px) {
+}
+@media only screen and (max-width: 1400px) {
+}
+@media only screen and (max-width: 1000px) {
+}
