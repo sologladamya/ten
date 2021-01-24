@@ -1,0 +1,202 @@
+/* Code tidied up by ScrapBook */
+:root { --blue:#007bff; --indigo:#6610f2; --purple:#6f42c1; --pink:#e83e8c; --red:#dc3545; --orange:#fd7e14; --yellow:#ffc107; --green:#28a745; --teal:#20c997; --cyan:#17a2b8; --white:#fff; --gray:#6c757d; --gray-dark:#343a40; --primary:#007bff; --secondary:#6c757d; --success:#28a745; --info:#17a2b8; --warning:#ffc107; --danger:#dc3545; --light:#f8f9fa; --dark:#343a40; --breakpoint-xs:0; --breakpoint-sm:576px; --breakpoint-md:768px; --breakpoint-lg:992px; --breakpoint-xl:1200px; --font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; --font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
+*, *::after, *::before { box-sizing: border-box; }
+html { font-family: sans-serif; line-height: 1.15; }
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
+body { margin: 0px; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size: 1rem; font-weight: 400; line-height: 1.5; color: rgb(33, 37, 41); text-align: left; background-color: rgb(255, 255, 255); }
+h1, h2, h3, h4, h5, h6 { margin-top: 0px; margin-bottom: 0.5rem; }
+p { margin-top: 0px; margin-bottom: 1rem; }
+dl, ol, ul { margin-top: 0px; margin-bottom: 1rem; }
+ol ol, ol ul, ul ol, ul ul { margin-bottom: 0px; }
+b, strong { font-weight: bolder; }
+small { font-size: 80%; }
+sub, sup { position: relative; font-size: 75%; line-height: 0; vertical-align: baseline; }
+sup { top: -0.5em; }
+a { color: rgb(0, 123, 255); text-decoration: none; background-color: transparent; }
+a:hover { color: rgb(0, 86, 179); text-decoration: underline; }
+a:not([href]):not([tabindex]) { color: inherit; text-decoration: none; }
+img { vertical-align: middle; border-style: none; }
+svg { overflow: hidden; vertical-align: middle; }
+table { border-collapse: collapse; }
+label { display: inline-block; margin-bottom: 0.5rem; }
+button { border-radius: 0px; }
+button:focus { outline: 1px dotted; }
+button, input, optgroup, select, textarea { margin: 0px; font-family: inherit; font-size: inherit; line-height: inherit; }
+button, input { overflow: visible; }
+button, select { text-transform: none; }
+[type="reset"], [type="submit"], button, html [type="button"] {  }
+[type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0px; border-style: none; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0px; }
+[type="search"] { outline-offset: -2px; }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5rem; font-family: inherit; font-weight: 500; line-height: 1.2; color: inherit; }
+.h1, h1 { font-size: 2.5rem; }
+.h2, h2 { font-size: 2rem; }
+.small, small { font-size: 80%; font-weight: 400; }
+.list-unstyled { padding-left: 0px; list-style: outside none none; }
+.container { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; }
+@media (min-width: 576px) {
+  .container { max-width: 540px; }
+}
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+}
+@media (min-width: 992px) {
+  .container { max-width: 960px; }
+}
+@media (min-width: 1200px) {
+  .container { max-width: 1140px; }
+}
+.container-fluid { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; }
+.row { display: flex; flex-wrap: wrap; margin-right: -20px; margin-left: -20px; }
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto { position: relative; width: 100%; min-height: 1px; padding-right: 15px; padding-left: 15px; }
+.col { flex-basis: 0px; flex-grow: 1; max-width: 100%; }
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+  .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-md-9 { flex: 0 0 75%; max-width: 75%; }
+}
+@media (min-width: 992px) {
+  .col-lg-4 { flex: 0 0 33.3333%; max-width: 33.3333%; }
+  .col-lg-8 { flex: 0 0 66.6667%; max-width: 66.6667%; }
+  .col-lg-12 { flex: 0 0 100%; max-width: 100%; }
+}
+@media (min-width: 1200px) {
+}
+@media (max-width: 575.98px) {
+}
+@media (max-width: 767.98px) {
+}
+@media (max-width: 991.98px) {
+}
+@media (max-width: 1199.98px) {
+}
+@media not all {
+}
+@media (min-width: 576px) {
+}
+@media not all {
+}
+@media not all {
+}
+@media not all {
+}
+@media not all {
+}
+@media not all {
+}
+@media not all {
+}
+@media not all {
+}
+@media (max-width: 575.98px) {
+}
+@media (min-width: 576px) {
+}
+@media (max-width: 767.98px) {
+}
+@media (min-width: 768px) {
+}
+@media (max-width: 991.98px) {
+}
+@media (min-width: 992px) {
+}
+@media (max-width: 1199.98px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 576px) {
+}
+@keyframes progress-bar-stripes {
+0% { background-position: 1rem 0px; }
+100% { background-position: 0px 0px; }
+}
+@keyframes progress-bar-stripes {
+0% { background-position: 1rem 0px; }
+100% { background-position: 0px 0px; }
+}
+@media not all {
+}
+@media not all {
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 992px) {
+}
+@media not all {
+}
+@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)) {
+  .carousel-item-next.carousel-item-left, .carousel-item-prev.carousel-item-right { transform: translate3d(0px, 0px, 0px); }
+}
+@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)) {
+  .active.carousel-item-right, .carousel-item-next { transform: translate3d(100%, 0px, 0px); }
+}
+@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)) {
+  .active.carousel-item-left, .carousel-item-prev { transform: translate3d(-100%, 0px, 0px); }
+}
+@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)) {
+  .carousel-fade .active.carousel-item-left, .carousel-fade .active.carousel-item-prev, .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev, .carousel-fade .carousel-item.active { transform: translate3d(0px, 0px, 0px); }
+}
+.clearfix::after { display: block; clear: both; content: ""; }
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media print {
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@supports ((position:-webkit-sticky) or (position:sticky)) {
+  .sticky-top { position: sticky; top: 0px; z-index: 1020; }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+.text-center { text-align: center !important; }
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media print {
+  *, *::after, *::before { text-shadow: none !important; box-shadow: none !important; }
+  a:not(.btn) { text-decoration: underline; }
+  img, tr { page-break-inside: avoid; }
+  h2, h3, p {  }
+  h2, h3 { page-break-after: avoid; }
+  @page {  }
+  body { min-width: 992px !important; }
+  .container { min-width: 992px !important; }
+}

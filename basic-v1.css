@@ -1,0 +1,149 @@
+/* Code tidied up by ScrapBook */
+.qon-tiny-smart-search { max-width: 1200px; }
+.qon-tiny-smart-search .autocomplete-search-container { display: flex; align-items: center; justify-content: center; }
+.qon-tiny-smart-search .autocomplete-search-container .autocomplete-search-input { width: 90%; border: 1px solid rgb(229, 235, 238); padding: 10px 20px; font-size: 0.875em; outline: medium none; transition: border 0.5s linear 0s; font-weight: 400; color: rgb(15, 29, 53); line-height: 50px; height: 50px; box-sizing: border-box; margin: 0px 1% 0px 0px; }
+.qon-tiny-smart-search .autocomplete-search-container .autocomplete-search-input:focus { outline: medium none; color: rgb(15, 29, 53); border: 1px solid rgb(30, 32, 34); }
+.qon-tiny-smart-search .autocomplete-search-container .autocomplete-search-button { border: medium none; background: rgb(15, 29, 53) none repeat scroll 0% 0%; color: rgb(255, 255, 255); padding: 15px 25px; font-size: 1.7rem; transition: all 0.3s linear 0s; text-decoration: none; cursor: pointer; outline: medium none; }
+.qon-tiny-smart-search .autocomplete-search-container .autocomplete-search-button:hover { background: rgb(82, 97, 107) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-weight: 500; }
+.qon-tiny-smart-search .loader-container { display: none; width: 100%; opacity: 0; position: absolute; margin-left: auto; margin-right: auto; left: 0px; right: 0px; max-width: inherit; z-index: 1001; background-color: rgb(255, 255, 255); box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23); transition: opacity 0.1s ease-in 0s; }
+.qon-tiny-smart-search .results-container { display: none; position: absolute; margin-left: auto; margin-right: auto; left: 0px; right: 0px; width: 100%; max-width: inherit; z-index: 1000; background-color: rgb(255, 255, 255); box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23); color: rgb(74, 74, 74); border: 1px solid rgb(222, 222, 222); flex-direction: column; justify-content: left; }
+.qon-tiny-smart-search .results-container .results-element { display: flex; flex-direction: column; flex-grow: 1; flex-basis: 100%; z-index: 100000; }
+.qon-smart-search { display: flex; flex-wrap: wrap; width: 100%; }
+.qon-smart-search .serp-search-container { display: flex; width: 100%; justify-content: center; align-items: center; margin-bottom: 2rem; }
+.qon-smart-search .serp-search-container .serp-search-input { width: 75%; border: 1px solid rgb(229, 235, 238); padding: 10px 20px; font-size: 0.875em; outline: medium none; transition: border 0.5s linear 0s; font-weight: 400; color: rgb(15, 29, 53); line-height: 50px; height: 50px; box-sizing: border-box; margin: 0px 1% 0px 0px; }
+.qon-smart-search .serp-search-container .serp-search-input:focus { outline: medium none; color: rgb(15, 29, 53); border: 1px solid rgb(30, 32, 34); }
+.qon-smart-search .serp-search-container .serp-search-button { border: medium none; background: rgb(15, 29, 53) none repeat scroll 0% 0%; color: rgb(255, 255, 255); padding: 15px 25px; font-size: 1.7rem; transition: all 0.3s linear 0s; text-decoration: none; cursor: pointer; outline: medium none; }
+.qon-smart-search .serp-search-container .serp-search-button:hover { background: rgb(82, 97, 107) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-weight: 500; }
+.qon-smart-search .sort-container { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem; padding-top: 1rem; }
+.qon-smart-search .sort-container .sort-label { font-size: 0.875em; text-transform: uppercase; margin-right: 10px; }
+.qon-smart-search .sort-container .sort-element-wrapper { position: relative; }
+.qon-smart-search .sort-container .sort-element-wrapper::after { content: ""; width: 13px; height: 13px; position: absolute; top: 50%; right: 7px; transform: translateY(-50%); background: transparent url("arrow-down.svg") no-repeat scroll 50% center / contain ; z-index: 2; pointer-events: none; }
+.qon-smart-search .sort-container .sort-element-wrapper .sort-element { cursor: pointer; padding: 10px 25px 10px 20px; outline: 0px none; border-radius: 0px; border: 1px solid rgb(229, 235, 238); color: rgb(15, 29, 53); -moz-appearance: none; transition: all 0.25s linear 0s; margin: 0px; min-width: 250px; font-size: 0.875em; }
+.qon-smart-search .sort-container .sort-element-wrapper .sort-element:hover { border-color: rgb(30, 32, 34); }
+.qon-smart-search .qon-filters-container { display: none; width: 100%; }
+.qon-smart-search .show-filters { display: none; font-size: 0.8rem; line-height: 1; padding: 0.7rem 1.2rem; margin-bottom: 10px; margin-right: 15px; text-align: center; border: 1px solid rgb(15, 29, 53); color: rgb(255, 255, 255); background: rgb(15, 29, 53) none repeat scroll 0% 0%; cursor: pointer; transition: all 0.2s ease-in 0s; }
+.qon-smart-search .show-filters:hover { background: rgb(125, 68, 50) none repeat scroll 0% 0%; }
+.qon-smart-search .show-filters.active { display: inline-block; }
+.qon-smart-search .hide-filters { display: none; font-size: 1.8rem; line-height: 1; padding: 0.6rem 1rem; color: rgb(84, 84, 84); border: 0px none; cursor: pointer; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; position: absolute; top: 0px; right: 0px; }
+.qon-smart-search .show-results { display: none; position: fixed; bottom: 15px; cursor: pointer; left: 2%; width: 96%; padding: 0.4rem 1rem; border: medium none; border-radius: 2px; background: rgb(76, 76, 76) none repeat scroll 0% 0%; font-size: 1.2rem; color: rgb(255, 255, 255); transition: all 0.2s ease-in 0s; z-index: 10000; }
+.qon-smart-search .show-results:hover { background: rgb(125, 68, 50) none repeat scroll 0% 0%; }
+.qon-smart-search .results-element { display: flex; flex-wrap: wrap; border-top: medium none; }
+.qon-smart-search .results-element .loader { position: absolute; left: 0px; z-index: 100000; }
+.qon-smart-search .pagination-container { display: flex; flex-wrap: wrap; justify-content: center; padding-top: 36px; padding-bottom: 36px; margin-top: 10px; }
+.qon-smart-search .remove-filters { display: none; float: right; line-height: 1; padding: 0.7rem 1.2rem; margin-bottom: 10px; border: 1px solid rgb(221, 221, 221); background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; font-size: 0.8rem; text-align: center; color: rgb(0, 0, 0); cursor: pointer; transition: all 0.2s ease 0s; }
+.qon-smart-search .remove-filters:focus { outline: medium none; }
+.qon-smart-search .remove-filters span { display: flex; justify-content: center; }
+.qon-smart-search .remove-filters:hover { border-color: rgb(0, 0, 0); }
+.qon-smart-search-serp-modal .qon-smart-search { display: flex; flex-wrap: wrap; width: 90%; }
+.qon-smart-search-serp-modal .qon-smart-search .serp-search-container { display: flex; width: 100%; justify-content: center; align-items: center; margin-bottom: 2rem; }
+.qon-smart-search-serp-modal .qon-smart-search .serp-search-container .serp-search-input { width: 75%; border: 1px solid rgb(229, 235, 238); padding: 10px 20px; font-size: 0.875em; outline: medium none; transition: border 0.5s linear 0s; font-weight: 400; color: rgb(15, 29, 53); line-height: 50px; height: 50px; box-sizing: border-box; margin: 0px 1% 0px 0px; }
+.qon-smart-search-serp-modal .qon-smart-search .serp-search-container .serp-search-input:focus { outline: medium none; color: rgb(15, 29, 53); border: 1px solid rgb(30, 32, 34); }
+.qon-smart-search-serp-modal .qon-smart-search .serp-search-container .serp-search-button { border: medium none; background: rgb(15, 29, 53) none repeat scroll 0% 0%; color: rgb(255, 255, 255); padding: 15px 25px; font-size: 1.7rem; transition: all 0.3s linear 0s; text-decoration: none; cursor: pointer; outline: medium none; }
+.qon-smart-search-serp-modal .qon-smart-search .serp-search-container .serp-search-button:hover { background: rgb(82, 97, 107) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-weight: 500; }
+.qon-smart-search-serp-modal .qon-smart-search .sort-container { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem; padding-top: 1rem; }
+.qon-smart-search-serp-modal .qon-smart-search .sort-container .sort-label { font-size: 0.875em; text-transform: uppercase; margin-right: 10px; }
+.qon-smart-search-serp-modal .qon-smart-search .sort-container .sort-element-wrapper { position: relative; }
+.qon-smart-search-serp-modal .qon-smart-search .sort-container .sort-element-wrapper::after { content: ""; width: 13px; height: 13px; position: absolute; top: 50%; right: 7px; transform: translateY(-50%); background: transparent url("arrow-down.svg") no-repeat scroll 50% center / contain ; z-index: 2; pointer-events: none; }
+.qon-smart-search-serp-modal .qon-smart-search .sort-container .sort-element-wrapper .sort-element { cursor: pointer; padding: 10px 25px 10px 20px; outline: 0px none; border-radius: 0px; border: 1px solid rgb(229, 235, 238); color: rgb(15, 29, 53); -moz-appearance: none; transition: all 0.25s linear 0s; margin: 0px; min-width: 250px; font-size: 0.875em; }
+.qon-smart-search-serp-modal .qon-smart-search .sort-container .sort-element-wrapper .sort-element:hover { border-color: rgb(30, 32, 34); }
+.qon-smart-search-serp-modal .qon-smart-search .qon-filters-container { display: none; width: 100%; }
+.qon-smart-search-serp-modal .qon-smart-search .show-filters { display: none; font-size: 0.8rem; line-height: 1; padding: 0.7rem 1.2rem; margin-bottom: 10px; margin-right: 15px; text-align: center; border: 1px solid rgb(15, 29, 53); color: rgb(255, 255, 255); background: rgb(15, 29, 53) none repeat scroll 0% 0%; cursor: pointer; transition: all 0.2s ease-in 0s; }
+.qon-smart-search-serp-modal .qon-smart-search .show-filters:hover { background: rgb(125, 68, 50) none repeat scroll 0% 0%; }
+.qon-smart-search-serp-modal .qon-smart-search .show-filters.active { display: inline-block; }
+.qon-smart-search-serp-modal .qon-smart-search .hide-filters { display: none; font-size: 1.8rem; line-height: 1; padding: 0.6rem 1rem; color: rgb(84, 84, 84); border: 0px none; cursor: pointer; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; position: absolute; top: 0px; right: 0px; }
+.qon-smart-search-serp-modal .qon-smart-search .show-results { display: none; position: fixed; bottom: 15px; cursor: pointer; left: 2%; width: 96%; padding: 0.4rem 1rem; border: medium none; border-radius: 2px; background: rgb(76, 76, 76) none repeat scroll 0% 0%; font-size: 1.2rem; color: rgb(255, 255, 255); transition: all 0.2s ease-in 0s; z-index: 10000; }
+.qon-smart-search-serp-modal .qon-smart-search .show-results:hover { background: rgb(125, 68, 50) none repeat scroll 0% 0%; }
+.qon-smart-search-serp-modal .qon-smart-search .results-element { display: flex; flex-wrap: wrap; border-top: medium none; }
+.qon-smart-search-serp-modal .qon-smart-search .results-element .loader { position: absolute; left: 0px; z-index: 100000; }
+.qon-smart-search-serp-modal .qon-smart-search .pagination-container { display: flex; flex-wrap: wrap; justify-content: center; padding-top: 36px; padding-bottom: 36px; margin-top: 10px; }
+.qon-smart-search-serp-modal .qon-smart-search .remove-filters { display: none; float: right; line-height: 1; padding: 0.7rem 1.2rem; margin-bottom: 10px; border: 1px solid rgb(221, 221, 221); background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; font-size: 0.8rem; text-align: center; color: rgb(0, 0, 0); cursor: pointer; transition: all 0.2s ease 0s; }
+.qon-smart-search-serp-modal .qon-smart-search .remove-filters:focus { outline: medium none; }
+.qon-smart-search-serp-modal .qon-smart-search .remove-filters span { display: flex; justify-content: center; }
+.qon-smart-search-serp-modal .qon-smart-search .remove-filters:hover { border-color: rgb(0, 0, 0); }
+@media (min-width: 549px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+  .qon-smart-search-serp-modal .qon-smart-search { justify-content: left; }
+  .qon-smart-search-serp-modal .qon-smart-search .show-filters, .qon-smart-search-serp-modal .qon-smart-search .show-filters.active { display: none; }
+  .qon-smart-search-serp-modal .qon-smart-search .qon-filters-container { display: block; }
+  .qon-smart-search-serp-modal .qon-smart-search .results-container { flex-basis: 75%; }
+  .qon-smart-search-serp-modal .qon-smart-search aside.qon-filters-wrapper { display: flex; flex-basis: 24%; flex-direction: column; padding-right: 1%; }
+}
+@media (min-width: 1200px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 480px) {
+}
+@media (max-width: 360px) {
+}
+@media (max-width: 479px) {
+}
+@media (min-width: 1025px) {
+}
+.qon-smart-search .loader, .qon-tiny-smart-search .loader { margin: auto; width: 100%; height: 50px; background: transparent none repeat scroll 0% 0%; position: relative; }
+.qon-smart-search .loader::after, .qon-smart-search .loader::before, .qon-tiny-smart-search .loader::after, .qon-tiny-smart-search .loader::before { content: ""; border-radius: 50%; font-size: 15px; padding: 15px; position: absolute; text-indent: -9999em; top: 50%; left: 50%; margin: -15px; transform: translateZ(0px); }
+.qon-smart-search .loader::before, .qon-tiny-smart-search .loader::before { z-index: 10; border-width: 0.1em; border-style: solid; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgb(180, 151, 89); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; animation: 2s linear 0s normal none infinite running spin-animation; }
+.qon-smart-search .loader::after, .qon-tiny-smart-search .loader::after { z-index: 15; border-width: 0.1em; border-style: solid; border-color: transparent transparent transparent rgb(15, 29, 53); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; animation: 1s ease-in-out 0s normal none infinite running spin-animation; }
+@media (min-width: 549px) {
+  .qon-tiny-smart-search .results-container { flex-direction: row; }
+  .qon-tiny-smart-search .loader-container, .qon-tiny-smart-search .results-container { width: 65%; }
+}
+@media (min-width: 768px) {
+  .qon-tiny-smart-search .loader-container, .qon-tiny-smart-search .results-container { width: 50%; }
+}
+@media (min-width: 992px) {
+  .qon-tiny-smart-search .loader-container, .qon-tiny-smart-search .results-container { width: 40%; }
+  .qon-smart-search { justify-content: left; }
+  .qon-smart-search .show-filters, .qon-smart-search .show-filters.active { display: none; }
+  .qon-smart-search .qon-filters-container { display: block; }
+  .qon-smart-search .results-container { flex-basis: 75%; }
+  .qon-smart-search aside.qon-filters-wrapper { display: flex; flex-basis: 24%; flex-direction: column; padding-right: 1%; }
+}
+@media (min-width: 1200px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 480px) {
+}
+@media (max-width: 360px) {
+}
+@media (max-width: 479px) {
+}
+@media (min-width: 1025px) {
+}
+@keyframes spin-animation {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(1turn); }
+}
+@keyframes spin-animation {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(1turn); }
+}
+.qon-tiny-smart-search { width: 100%; position: relative; justify-content: flex-start; }
+.qon-tiny-smart-search .autocomplete-search-container .autocomplete-search-input { font-size: 1em; height: auto; line-height: 21px; padding: 5px 10px; margin: 0px; }
+.qon-tiny-smart-search .autocomplete-search-container .autocomplete-search-button { padding: 8px 9px; line-height: 1; background-color: rgb(84, 84, 84); }
+.qon-tiny-smart-search .loader-container { z-index: 2147483002; }
+.qon-tiny-smart-search .results-container { text-align: left; z-index: 2147483002; }
+.qon-smart-search-serp-modal { position: fixed; display: none; opacity: 0; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 2147483002; transition: all 0.25s ease-in 0s; overflow-y: scroll; }
+.qon-smart-search-serp-modal .qon-close-modal { color: rgb(255, 255, 255); font-weight: 700; font-size: 4rem; line-height: 1; position: absolute; top: 5px; right: 5px; }
+.qon-smart-search-serp-modal .qon-smart-search { max-width: 90%; margin: 40px auto; background-color: rgb(255, 255, 255); padding: 0px 20px; }
+.qon-smart-search-serp-modal .qon-smart-search .serp-search-container .serp-search-input { font-size: 1.3rem; }
+.qon-smart-search-serp-modal .qon-smart-search .show-filters, .qon-smart-search-serp-modal .qon-smart-search h2.filter-group-title { font-size: inherit; }
+.qon-smart-search-serp-modal .qon-smart-search .remove-filters { font-size: 1.4rem; }
+.qon-smart-search-serp-modal .qon-smart-search .show-results { font-size: 16px; }
+.qon-smart-search-serp-modal .qon-smart-search .qon-filters-header { display: none; }
+@media (min-width: 992px) {
+  .qon-tiny-smart-search .loader-container, .qon-tiny-smart-search .results-container { width: inherit; }
+  .qon-tiny-smart-search .autocomplete-search-container .autocomplete-search-button { background-color: rgb(15, 29, 53); }
+  .qon-smart-search aside.qon-filters-wrapper { flex-basis: 25%; }
+  .qon-smart-search aside.qon-filters-wrapper .qon-filters-header { display: block; }
+}
+@media (min-width: 768px) {
+  .qon-tiny-smart-search .loader-container, .qon-tiny-smart-search .results-container { width: inherit; }
+}
+@media (min-width: 549px) {
+  .qon-tiny-smart-search .loader-container, .qon-tiny-smart-search .results-container { width: inherit; }
+}
